@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chavez Steel Houston | Steel tube made in Houston</title>
+<meta name="description" content="Chavez Steel Houston LLC manufactures square and rectangular steel tube at 1955 Little York Rd, Houston TX 77093. Manufacturers, not resellers. Bundles ready for pickup.">
+<link rel="icon" href="assets/logo.jpg">
+<style>
+@font-face { font-family: "Red Hat Display"; font-weight: 900; font-display: swap; src: url(assets/fonts/red-hat-display-latin-900-normal.woff2) format("woff2"); }
+@font-face { font-family: "Red Hat Text"; font-weight: 400; font-display: swap; src: url(assets/fonts/red-hat-text-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Red Hat Text"; font-weight: 500; font-display: swap; src: url(assets/fonts/red-hat-text-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: "Red Hat Text"; font-weight: 700; font-display: swap; src: url(assets/fonts/red-hat-text-latin-700-normal.woff2) format("woff2"); }
+
+:root {
+  /* Brand: the red swoosh, yellow and blue of the GAC ring, black of the wordmark, mill-floor steel */
+  --paper: #f1f1ee;
+  --ink: #121212;
+  --red: #d71f16;
+  --red-deep: #a8150e;
+  --yellow: #ffd100;
+  --blue: #0b3fb3;
+  --blue-step: #1f52c4;
+  --panel: #232323;
+
+  --display: "Red Hat Display", system-ui, sans-serif;
+  --text: "Red Hat Text", system-ui, sans-serif;
+
+  /* five steps, nothing else */
+  --step-small: 0.875rem;
+  --step-body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --step-lead: clamp(1.375rem, 1rem + 1vw, 2rem);
+  --step-head: clamp(2.5rem, 1.2rem + 4.4vw, 5rem);
+  --step-display: clamp(3.25rem, 9vw, 8.75rem);
+
+  --m: clamp(16px, 2vw, 28px);
+  --gap: 8px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 var(--step-body)/1.5 var(--text); font-variant-numeric: tabular-nums; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+::selection { background: var(--yellow); color: var(--ink); }
+
+.display { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.92; }
+.h { font: 900 var(--step-head)/1 var(--display); letter-spacing: -0.03em; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 24px; border: 0; border-radius: 0;
+  background: var(--red); color: #fff; font: 700 var(--step-body)/1 var(--text);
+  text-decoration: none; cursor: pointer;
+  transition: transform .18s var(--ease), background-color .18s;
+}
+.btn:hover { background: var(--red-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(1px) scale(.98); }
+
+/* ---------- Hero: waterline ---------- */
+.hero { --seam: 50%; position: relative; height: 100svh; min-height: 600px; overflow: hidden; background: var(--paper); }
+.hero::after { content: ""; position: absolute; inset: var(--seam) 0 0 0; background: var(--red); }
+.bar { position: absolute; z-index: 5; inset: var(--m) var(--m) auto var(--m); display: flex; justify-content: space-between; align-items: center; }
+.mark { display: flex; align-items: center; gap: 12px; text-decoration: none; font: 700 var(--step-body)/1.1 var(--text); }
+.mark img { width: 52px; height: 52px; object-fit: cover; }
+.hero h1 {
+  position: absolute; z-index: 2; left: var(--m); right: var(--m);
+  top: var(--seam); transform: translateY(-75%);
+  font-size: var(--step-display); line-height: .9; text-align: center;
+}
+.hero h1 .line { display: block; overflow: hidden; }
+.hero h1 .line > span { display: block; color: var(--red); }
+/* The seam of the two fields runs through the second line: red above, ink below. A hard two-colour fill, not a fade. */
+.hero h1 .line + .line { position: relative; }
+.hero h1 .up { clip-path: inset(0 0 50% 0); }
+.hero h1 .line > .dn { position: absolute; inset: 0; color: var(--ink); clip-path: inset(50% 0 0 0); pointer-events: none; }
+.hero-photo {
+  position: absolute; z-index: 1; right: 4vw; bottom: 6svh; width: 25vw; aspect-ratio: 3 / 2; object-fit: cover;
+  transform: rotate(4deg);
+}
+.hero-sub { position: absolute; z-index: 3; left: 50%; bottom: 40px; transform: translateX(-50%); width: min(44ch, 60vw); text-align: center; color: #fff; font-size: max(1.125rem, var(--step-body)); }
+.hero-sub strong { font-weight: 700; }
+
+/* ---------- Intro: staircase ---------- */
+.intro { background: var(--blue); color: #fff; padding: 160px var(--m); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 16px; row-gap: 64px; align-items: center; }
+.stair { grid-column: 1 / 9; font: 900 var(--step-lead)/1.15 var(--display); letter-spacing: -0.02em; }
+.stair span { display: block; }
+.stair span:nth-child(2) { padding-left: 6vw; color: var(--yellow); }
+.stair span:nth-child(3) { padding-left: 12vw; }
+.stair span:nth-child(4) { padding-left: 18vw; color: var(--yellow); }
+.stair span:nth-child(5) { padding-left: 24vw; }
+.intro-photos { grid-column: 9 / 13; grid-row: 1 / 3; display: grid; gap: 16px; }
+.intro-photos img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.intro-note { grid-column: 1 / 7; grid-row: 2; align-self: end; max-width: 44ch; }
+
+/* ---------- Showcase: bundle tags ---------- */
+.tags { position: relative; height: 100svh; min-height: 760px; overflow: hidden; background: var(--ink); color: #fff; }
+.tags-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transform-origin: 50% 40%; will-change: transform; }
+.tags-copy { position: absolute; left: 18%; top: 9svh; width: min(36ch, 64vw); padding: 28px 32px; background: rgba(12,12,12,.74); }
+.tags-copy h2 { font: 900 var(--step-lead)/1.1 var(--display); letter-spacing: -0.02em; margin-bottom: 12px; }
+.tags-copy p { font-size: var(--step-body); }
+.tags-copy p + p { margin-top: 12px; }
+.slips { position: absolute; left: var(--m); right: var(--m); bottom: 0; display: flex; gap: 12px; align-items: flex-end; }
+.slip { flex: 1 1 0; min-width: 0; background: var(--paper); color: var(--ink); padding: 20px 18px 0; font-size: var(--step-small); line-height: 1.45; transition: transform .3s var(--ease); }
+.slip b { display: block; font: 900 var(--step-lead)/1 var(--display); text-transform: uppercase; letter-spacing: -0.02em; }
+.slip .spec { display: block; margin-top: 6px; font-size: var(--step-body); font-weight: 700; }
+.slip .cut { display: block; margin: 10px 0; color: #555; letter-spacing: .1em; overflow: hidden; white-space: nowrap; }
+.slip:nth-child(1) { height: 46svh; background: var(--yellow); --r: -1.5deg; }
+.slip:nth-child(2) { height: 34svh; }
+.slip:nth-child(3) { height: 40svh; --r: 1deg; }
+.slip:nth-child(4) { height: 31svh; }
+.slip:nth-child(5) { height: 43svh; }
+.slip:nth-child(6) { height: 33svh; --r: -1deg; }
+.slip { transform: rotate(var(--r, 0deg)); }
+.slip:hover { transform: rotate(var(--r, 0deg)) translateY(-12px); }
+
+/* ---------- List: one product per poster line ---------- */
+.products { background: var(--yellow); color: var(--ink); padding: 140px var(--m) 100px; }
+.products h2 { margin-bottom: 48px; }
+.products li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+.products .name { font-size: var(--step-display); line-height: 1; transition: color .2s; }
+.products li:hover .name { color: var(--red); }
+.products .fact { font-weight: 500; text-align: right; flex: 0 0 auto; }
+
+/* ---------- Pricing: one sentence + bundle counter ---------- */
+.deal { background: var(--ink); color: #fff; padding: 160px var(--m) 140px; }
+.deal h2 { font-size: var(--step-display); }
+.deal h2 .line { display: block; }
+.price { display: inline-block; background: var(--red); padding: 0 .15em; }
+.deal-row { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 16px; margin-top: 64px; align-items: end; }
+.deal-row p { grid-column: 1 / 7; font-size: var(--step-lead); line-height: 1.3; }
+.deal-row .btn { grid-column: 10 / 13; justify-self: end; }
+.calc { margin-top: 96px; display: grid; grid-template-columns: auto 1fr; gap: 28px 64px; align-items: center; background: var(--panel); padding: 40px; }
+.calc h3 { grid-column: 1 / -1; font: 700 var(--step-lead)/1.1 var(--text); }
+.stepper { display: flex; align-items: center; gap: 10px; }
+.stepper button { width: 64px; height: 64px; border: 0; background: var(--paper); color: var(--ink); font: 900 var(--step-lead)/1 var(--display); cursor: pointer; transition: transform .15s var(--ease), background-color .15s; }
+.stepper button:hover { background: var(--yellow); }
+.stepper button:active { transform: scale(.92); }
+.stepper button:disabled { opacity: .4; cursor: default; }
+.stepper output { min-width: 1.6ch; text-align: center; font: 900 var(--step-head)/1 var(--display); }
+.totals { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 40px 56px; }
+.totals .n { font: 900 var(--step-lead)/1 var(--display); letter-spacing: -0.02em; white-space: nowrap; }
+.totals .l { margin-top: 6px; font: 400 var(--step-body)/1.3 var(--text); letter-spacing: 0; color: #d4d4d4; }
+.calc-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; color: #d4d4d4; }
+.calc-actions .copy { background: none; border: 0; padding: 0; color: #fff; font: 700 var(--step-body)/1.5 var(--text); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.calc-actions .copy:hover { color: var(--yellow); }
+
+/* ---------- How to buy: photographs down a diagonal ---------- */
+.buy { background: var(--paper); padding: 180px var(--m) 200px; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 16px; align-items: start; }
+.buy h2 { grid-column: 7 / 13; grid-row: 1; }
+.stage { display: contents; }
+.stage img { width: 100%; object-fit: cover; }
+.stage .txt { max-width: 34ch; }
+.stage h3 { font: 900 var(--step-lead)/1.1 var(--display); letter-spacing: -0.02em; max-width: 18ch; }
+.stage p { margin-top: 10px; }
+.s1 img { grid-column: 1 / 6; grid-row: 1 / 3; aspect-ratio: 3 / 4; }
+.s1 .txt { grid-column: 7 / 11; grid-row: 2; margin-top: 48px; }
+.s2 img { grid-column: 5 / 9; grid-row: 3; aspect-ratio: 1; margin-top: 120px; }
+.s2 .txt { grid-column: 9 / 13; grid-row: 3; margin-top: 120px; padding-left: 24px; }
+.s3 img { grid-column: 6 / 13; grid-row: 4; aspect-ratio: 16 / 10; margin-top: 120px; }
+.s3 .txt { grid-column: 2 / 6; grid-row: 4; margin-top: 120px; }
+
+/* ---------- In stock: wall of tiles ---------- */
+.stock { background: var(--paper); padding: 0 var(--gap) var(--gap); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.tile { position: relative; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
+.tile .w { font-size: var(--step-display); line-height: 1; }
+.tile h2.w { font-size: var(--step-head); text-align: center; }
+.tile small { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font-size: var(--step-small); font-weight: 500; }
+.tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.tile:hover img { transform: scale(1.05); }
+.t-red { background: var(--red); color: #fff; }
+.t-yel { background: var(--yellow); color: var(--ink); }
+.t-blu { background: var(--blue); color: #fff; }
+.t-ink { background: var(--ink); color: var(--yellow); }
+
+/* ---------- Visit: photo strip + three cells ---------- */
+.visit { background: var(--blue); color: #fff; padding: 48px 0 140px; overflow: hidden; }
+.strip { display: flex; gap: 8px; width: max-content; animation: drift 70s linear infinite; }
+.strip img { height: 150px; object-fit: cover; flex: 0 0 auto; }
+.strip img:nth-child(3n+1) { width: 113px; }
+.strip img:nth-child(3n+2) { width: 150px; }
+.strip img:nth-child(3n) { width: 225px; }
+@keyframes drift { to { transform: translateX(-50%); } }
+.visit-body { margin: 72px var(--m) 0; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 16px; row-gap: 40px; }
+.visit h2 { grid-column: 1 / 8; }
+.visit-addr { grid-column: 8 / 13; align-self: end; font-size: var(--step-lead); line-height: 1.25; font-weight: 500; }
+.cells { grid-column: 1 / 13; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.cell { min-height: 96px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 16px; background: var(--blue-step); color: #fff; text-decoration: none; font-size: var(--step-body); font-weight: 700; transition: background-color .2s, color .2s, transform .2s var(--ease); }
+.cell span { font-weight: 400; font-size: var(--step-small); }
+a.cell:hover { background: #fff; color: var(--blue); transform: translateY(-3px); }
+.cell.go { background: #fff; color: var(--blue); }
+.cell.go:hover { background: var(--yellow); color: var(--ink); }
+
+/* ---------- Footer: photograph half, menu half ---------- */
+.foot { display: grid; grid-template-columns: repeat(12, 1fr); min-height: 100svh; background: var(--ink); color: #fff; }
+.foot-photo { grid-column: 1 / 7; position: relative; overflow: hidden; }
+.foot-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 70%; }
+.foot-menu { grid-column: 8 / 13; padding: 80px var(--m) 32px 0; display: flex; flex-direction: column; }
+.foot-menu .mark { margin-bottom: 56px; }
+.foot-menu nav a { display: block; margin-bottom: 28px; font: 700 var(--step-lead)/1 var(--text); text-decoration: none; transition: transform .25s var(--ease), color .2s; }
+.foot-menu nav:hover a { color: #9a9a9a; }
+.foot-menu nav a:hover, .foot-menu nav a:focus-visible { color: #fff; transform: translateX(12px); }
+.foot-blocks { margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.foot-blocks b { display: block; margin-bottom: 4px; }
+.foot-name { margin-top: auto; padding-top: 64px; font-size: var(--step-head); color: var(--red); }
+.legal { margin-top: 24px; font-size: var(--step-small); color: #b0b0b0; }
+
+/* ---------- Motion ---------- */
+.js .hero h1 .line > span { transform: translateY(105%); }
+.js .hero.ready h1 .line > span { transform: none; transition: transform .9s var(--ease); }
+.js .hero.ready h1 .line + .line > span { transition-delay: .11s; }
+.js .hero-sub, .js .bar .btn, .js .hero-photo { opacity: 0; }
+.js .hero.ready .hero-sub, .js .hero.ready .bar .btn { opacity: 1; transition: opacity .6s .6s, transform .8s .6s var(--ease); }
+.js .hero.ready .hero-photo { opacity: 1; transition: opacity .6s .75s; }
+.js .hero-sub { transform: translateX(-50%) translateY(16px); }
+.js .hero.ready .hero-sub { transform: translateX(-50%); }
+.js [data-r] { opacity: 0; translate: 0 28px; }
+.js .in [data-r] { opacity: 1; translate: 0 0; transition: opacity .7s var(--ease), translate .9s var(--ease), transform .3s var(--ease); transition-delay: calc(var(--i, 0) * 75ms), calc(var(--i, 0) * 75ms), 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .hero h1 .line > span, .js [data-r] { transform: none !important; translate: none !important; opacity: 1 !important; }
+  .js .hero-sub, .js .bar .btn, .js .hero-photo { opacity: 1; }
+  .strip { animation: none; }
+  .tags-photo { transform: none !important; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+  .slip { padding: 16px 12px 0; }
+  .slip b { font-size: 1.375rem; }
+  .slip .spec { font-size: var(--step-small); }
+  .tags-copy { left: var(--m); width: min(36ch, 80vw); }
+  .deal-row p { grid-column: 1 / 9; }
+  .deal-row .btn { grid-column: 9 / 13; }
+  .calc { grid-template-columns: 1fr; }
+  .totals { gap: 32px 40px; }
+  .hero-sub { left: var(--m); transform: none; width: min(36ch, 52vw); text-align: left; }
+  .js .hero-sub, .js .hero.ready .hero-sub { transform: none; }
+  .hero-photo { width: 36vw; bottom: 40px; }
+  .slip:nth-child(n+5) { display: none; }
+  .visit h2 { grid-column: 1 / 13; }
+  .visit-addr { grid-column: 1 / 13; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 640px) {
+  :root { --step-display: 12.4vw; --step-head: 9vw; --step-lead: 1.375rem; }
+  .hero { --seam: 46%; }
+  .hero h1 { left: 16px; right: 16px; }
+  .bar { inset: 16px 16px auto 16px; }
+  .bar .btn { min-height: 44px; padding: 0 16px; }
+  .mark img { width: 40px; height: 40px; }
+  .mark .full { display: none; }
+  .hero-photo { width: 46vw; right: 16px; bottom: 168px; }
+  .hero-sub { left: 16px; right: 16px; width: auto; transform: none; text-align: left; bottom: 24px; }
+  .js .hero-sub, .js .hero.ready .hero-sub { transform: none; }
+
+  .intro { display: block; padding: 96px 16px; }
+  .stair { font-size: 1.5rem; }
+  .stair span:nth-child(2) { padding-left: 5vw; }
+  .stair span:nth-child(3) { padding-left: 10vw; }
+  .stair span:nth-child(4) { padding-left: 15vw; }
+  .stair span:nth-child(5) { padding-left: 20vw; }
+  .intro-photos { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 48px; }
+  .intro-note { margin-top: 32px; }
+
+  .tags { height: auto; min-height: 0; padding: 72px 16px 0; }
+  .tags-copy { position: relative; left: auto; top: auto; width: auto; padding: 20px; }
+  .slips { position: relative; left: auto; right: auto; margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: end; }
+  .slip:nth-child(n) { height: auto; padding: 16px 14px 20px; }
+  .slip:nth-child(2n) { margin-top: 28px; }
+  .slip:nth-child(n+5) { display: none; }
+
+  .products { padding: 96px 16px 64px; }
+  .products li { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 40px; }
+  .products .fact { text-align: left; margin-top: 4px; }
+
+  .deal { padding: 96px 16px; }
+  .deal-row { display: block; margin-top: 40px; }
+  .deal-row .btn { width: 100%; margin-top: 24px; }
+  .calc { grid-template-columns: 1fr; padding: 24px 20px; margin-top: 64px; gap: 24px; }
+  .totals { grid-template-columns: repeat(2, auto); gap: 44px 32px; }
+
+  .buy { display: block; padding: 120px 16px; }
+  .buy h2 { margin-bottom: 32px; }
+  .stage { display: block; margin-bottom: 56px; }
+  .stage img, .stage .txt { margin: 0 !important; padding: 0 !important; }
+  .stage .txt { margin-top: 16px !important; }
+  .s2 img { width: 62%; margin-left: auto !important; }
+  .s2 .txt { margin-left: 38% !important; }
+  .s3 img { width: 78%; }
+
+  .stock { grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 6px 6px; }
+  .tile small { bottom: 12px; }
+
+  .visit { padding: 32px 0 96px; }
+  .strip img { height: 110px; }
+  .strip img:nth-child(3n+1) { width: 83px; }
+  .strip img:nth-child(3n+2) { width: 110px; }
+  .strip img:nth-child(3n) { width: 165px; }
+  .visit-body { display: block; margin: 48px 16px 0; }
+  .visit-addr { margin: 20px 0 32px; }
+  .cells { grid-template-columns: 1fr; }
+  .cell { min-height: 64px; }
+
+  .foot { display: block; }
+  .foot-photo { height: 50svh; }
+  .foot-menu { padding: 48px 16px 28px; }
+  .foot-menu .mark { margin-bottom: 32px; }
+  .foot-menu nav a { font-size: 8vw; margin-bottom: 20px; }
+  .foot-blocks { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="bar">
+    <a class="mark" href="#top" aria-label="Chavez Houston Steel, home">
+      <img src="assets/logo.jpg" alt="" width="52" height="52">
+      <span>Chavez <span class="full">Houston Steel</span></span>
+    </a>
+    <a class="btn" href="https://m.me/61567724675792" rel="noopener">Message us</a>
+  </div>
+
+  <h1 class="display"><span class="line"><span>Build strong</span></span><span class="line"><span class="up">Construye</span><span class="dn" aria-hidden="true">Construye</span></span></h1>
+
+  <img class="hero-photo" src="assets/bundles-close.jpg" alt="Strapped bundles of red-primer and galvanized tube on the mill floor" width="828" height="520">
+
+  <p class="hero-sub"><strong>Chavez Steel Houston</strong> makes square and rectangular steel tube at its own mill in north Houston. We are manufacturers, not resellers.</p>
+</header>
+
+<main>
+
+<section class="intro" aria-label="About Chavez Steel Houston">
+  <p class="stair" data-r>
+    <span>We don't resell steel.</span>
+    <span>We make it here,</span>
+    <span>strap it in bundles</span>
+    <span>and you pick it up</span>
+    <span>on Little York Road.</span>
+  </p>
+  <div class="intro-photos">
+    <img data-r style="--i:2" src="assets/floor-wide.jpg" alt="The tube mill and stacked bundles inside the Chavez Steel warehouse" width="828" height="520" loading="lazy">
+    <img data-r style="--i:3" src="assets/stock-4.jpg" alt="Black, galvanized and red-primer tube stacked by size" width="315" height="315" loading="lazy">
+  </div>
+  <p class="intro-note" data-r style="--i:4">Chavez Steel Houston LLC is a commercial and industrial steel manufacturer at 1955 Little York Rd, Houston, TX 77093.</p>
+</section>
+
+<section class="tags" id="tags" aria-labelledby="tags-h">
+  <img class="tags-photo" src="assets/warehouse.jpg" alt="Inside the Chavez Steel mill: rows of tube bundles under the roof beams" width="828" height="1792" loading="lazy">
+  <div class="tags-copy" data-r>
+    <h2 id="tags-h">Tagged at the mill.</h2>
+    <p>Every bundle is strapped and tagged before it leaves the floor: size, wall, length, count and finish.</p>
+    <p>These are the tags we print most. Ask for the size you need.</p>
+  </div>
+  <div class="slips">
+    <div class="slip" data-r style="--i:1"><b>Square 4×4</b><span class="spec">14 ga · 24 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>20 pieces a bundle<br>Red primer, inside and out<br>About 4.3 lb per ft<br><strong>$90 each</strong></div>
+    <div class="slip" data-r style="--i:2"><b>Square 2×2</b><span class="spec">14 ga · 24 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>Red primer<br>About 2.0 lb per ft<br>Fences, gates, frames</div>
+    <div class="slip" data-r style="--i:3"><b>Square 3×3</b><span class="spec">11 ga · 24 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>Black, bare finish<br>About 4.6 lb per ft<br>Posts and columns</div>
+    <div class="slip" data-r style="--i:4"><b>Rect 2×4</b><span class="spec">14 ga · 24 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>Red primer<br>About 3.2 lb per ft<br>Trailers, purlins</div>
+    <div class="slip" data-r style="--i:5"><b>Square 1½</b><span class="spec">16 ga · 20 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>Galvanized<br>About 1.2 lb per ft<br>Rails and racks</div>
+    <div class="slip" data-r style="--i:6"><b>Rect 2×6</b><span class="spec">11 ga · 24 ft</span><span class="cut">- - - - - - - - - - - - - - -</span>Black, bare finish<br>About 6.2 lb per ft<br>Beams and headers</div>
+  </div>
+</section>
+
+<section class="products" id="products" aria-labelledby="products-h">
+  <h2 id="products-h" class="h" data-r>What we make</h2>
+  <ul>
+    <li data-r style="--i:1"><span class="name display">Square</span><span class="fact">1 to 4 in, 16 to 11 ga</span></li>
+    <li data-r style="--i:2"><span class="name display">Rectangle</span><span class="fact">1×2 to 2×6 in</span></li>
+    <li data-r style="--i:3"><span class="name display">Red primer</span><span class="fact">Coated inside and out</span></li>
+    <li data-r style="--i:4"><span class="name display">Black</span><span class="fact">Bare mill finish</span></li>
+    <li data-r style="--i:5"><span class="name display">Galvanized</span><span class="fact">Zinc coated</span></li>
+    <li data-r style="--i:6"><span class="name display">Bundles</span><span class="fact">20 pieces of 4×4</span></li>
+  </ul>
+</section>
+
+<section class="deal" id="deal" aria-labelledby="deal-h">
+  <h2 id="deal-h" class="display" data-r><span class="line">4×4 bundle,</span><span class="line"><span class="price">$90</span> each.</span></h2>
+  <div class="deal-row">
+    <p data-r style="--i:1">Twenty pieces of 4×4 square tube, 14 gauge, 24 feet long, red primer inside and out. Strapped and ready for pickup at the mill.</p>
+    <a class="btn" data-r style="--i:2" id="reserve" href="https://m.me/61567724675792" rel="noopener">Reserve a bundle</a>
+  </div>
+
+  <div class="calc" data-r style="--i:3" aria-labelledby="calc-h">
+    <h3 id="calc-h">How many bundles?</h3>
+    <div class="stepper">
+      <button type="button" id="less" aria-label="One bundle fewer">−</button>
+      <output id="count" aria-live="polite">1</output>
+      <button type="button" id="more" aria-label="One bundle more">+</button>
+    </div>
+    <div class="totals" aria-live="polite">
+      <div><p class="n" id="t-pcs">20</p><p class="l">pieces</p></div>
+      <div><p class="n" id="t-ft">480 ft</p><p class="l">of tube</p></div>
+      <div><p class="n" id="t-lb">≈ 2,070 lb</p><p class="l">to haul</p></div>
+      <div><p class="n" id="t-usd">$1,800</p><p class="l">before tax</p></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="copy" id="copy">Copy this order</button>
+      <span id="copy-note">Price as posted on our page. Weight is approximate. Confirm stock when you message us.</span>
+    </div>
+  </div>
+</section>
+
+<section class="buy" id="buy" aria-labelledby="buy-h">
+  <h2 id="buy-h" class="h" data-r>How to buy</h2>
+  <div class="stage s1">
+    <img data-r src="assets/stock-6.jpg" alt="Black square tube stacked in a strapped bundle" width="315" height="315" loading="lazy">
+    <div class="txt" data-r style="--i:1"><h3>First, message us</h3><p>Tell us the size, gauge, length and how many pieces you need. We answer on Facebook Messenger.</p></div>
+  </div>
+  <div class="stage s2">
+    <img data-r src="assets/stock-9.jpg" alt="Red-primer square tube, ends facing the camera" width="315" height="315" loading="lazy">
+    <div class="txt" data-r style="--i:1"><h3>Then we pull your order</h3><p>We pull it from stock on the mill floor, strap it and tag the bundle.</p></div>
+  </div>
+  <div class="stage s3">
+    <img data-r src="assets/floor-wide.jpg" alt="Bundles laid out across the warehouse floor" width="828" height="520" loading="lazy">
+    <div class="txt" data-r style="--i:1"><h3>Last, you pick it up</h3><p>Pick it up at 1955 Little York Rd. Bring a trailer that can carry 24-foot lengths.</p></div>
+  </div>
+</section>
+
+<section class="stock" id="stock" aria-label="In stock">
+  <div class="tile t-red" data-r><h2 class="w display">In stock</h2><small>At the yard now</small></div>
+  <div class="tile" data-r style="--i:1"><img src="assets/stock-7.jpg" alt="Red-primer tube stacked high" width="315" height="315" loading="lazy"></div>
+  <div class="tile t-yel" data-r style="--i:2"><span class="w display">4×4</span><small>Square tube</small></div>
+  <div class="tile t-blu" data-r style="--i:3"><span class="w display">14</span><small>Gauge wall</small></div>
+  <div class="tile t-ink" data-r><span class="w display">24′</span><small>Foot lengths</small></div>
+  <div class="tile" data-r style="--i:1"><img src="assets/stock-5.jpg" alt="Black square and rectangular tube in tall stacks" width="315" height="315" loading="lazy"></div>
+  <div class="tile t-red" data-r style="--i:2"><span class="w display">20</span><small>Pieces a bundle</small></div>
+  <div class="tile t-yel" data-r style="--i:3"><span class="w display">$90</span><small>Each, 4×4</small></div>
+  <div class="tile" data-r><img src="assets/stock-8.jpg" alt="Red-primer rectangular tube in bundles" width="315" height="315" loading="lazy"></div>
+  <div class="tile t-blu" data-r style="--i:1"><span class="w display">TX</span><small>Made in Houston</small></div>
+  <div class="tile" data-r style="--i:2"><img src="assets/stock-3.jpg" alt="The full length of the Chavez Steel warehouse" width="315" height="315" loading="lazy"></div>
+  <div class="tile t-ink" data-r style="--i:3"><span class="w display">Red</span><small>Primer inside and out</small></div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-h">
+  <div class="strip" aria-hidden="true">
+    <img src="assets/stock-7.jpg" alt=""><img src="assets/stock-5.jpg" alt=""><img src="assets/floor-wide.jpg" alt=""><img src="assets/stock-9.jpg" alt=""><img src="assets/stock-6.jpg" alt=""><img src="assets/bundles-close.jpg" alt=""><img src="assets/stock-8.jpg" alt=""><img src="assets/stock-4.jpg" alt=""><img src="assets/offer-tubes.jpg" alt=""><img src="assets/stock-3.jpg" alt=""><img src="assets/stock-7.jpg" alt=""><img src="assets/floor-wide.jpg" alt="">
+    <img src="assets/stock-7.jpg" alt=""><img src="assets/stock-5.jpg" alt=""><img src="assets/floor-wide.jpg" alt=""><img src="assets/stock-9.jpg" alt=""><img src="assets/stock-6.jpg" alt=""><img src="assets/bundles-close.jpg" alt=""><img src="assets/stock-8.jpg" alt=""><img src="assets/stock-4.jpg" alt=""><img src="assets/offer-tubes.jpg" alt=""><img src="assets/stock-3.jpg" alt=""><img src="assets/stock-7.jpg" alt=""><img src="assets/floor-wide.jpg" alt="">
+  </div>
+  <div class="visit-body">
+  <h2 id="visit-h" class="h" data-r>Come to the mill</h2>
+  <p class="visit-addr" data-r style="--i:1">1955 Little York Rd, Houston, TX 77093. In-store pickup on the mill floor.</p>
+  <div class="cells">
+    <a class="cell" data-r style="--i:1" href="https://www.google.com/maps/dir/?api=1&amp;destination=1955+Little+York+Rd,+Houston,+TX+77093" rel="noopener">Get directions<span>1955 Little York Rd</span></a>
+    <div class="cell" data-r style="--i:2">In-store pickup<span>Message ahead to check hours</span></div>
+    <a class="cell go" data-r style="--i:3" href="https://m.me/61567724675792" rel="noopener">Message us<span>Facebook Messenger</span></a>
+  </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-photo"><img src="assets/offer-tubes.jpg" alt="Black and red-primer square tube ends, stacked" width="640" height="685" loading="lazy"></div>
+  <div class="foot-menu">
+    <a class="mark" href="#top"><img src="assets/logo.jpg" alt="" width="52" height="52"><span>Chavez Houston Steel</span></a>
+    <nav aria-label="Footer">
+      <a href="#products">What we make</a>
+      <a href="#tags">Bundle tags</a>
+      <a href="#deal">4×4 bundle deal</a>
+      <a href="#buy">How to buy</a>
+      <a href="#visit">Visit the mill</a>
+    </nav>
+    <div class="foot-blocks">
+      <p><b>Visit</b>1955 Little York Rd<br>Houston, TX 77093</p>
+      <p><b>Follow</b><a href="https://www.facebook.com/profile.php?id=61567724675792" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="foot-name display">Build strong.</p>
+    <p class="legal">© 2026 Chavez Steel Houston LLC. Commercial and industrial steel.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  var hero = document.querySelector('.hero');
+  requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add('ready'); }); });
+
+  // Section entrances
+  var secs = document.querySelectorAll('main > section, .foot');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    secs.forEach(function (s) { io.observe(s); });
+  } else {
+    secs.forEach(function (s) { s.classList.add('in'); });
+  }
+
+  // Slow push-in on the mill photograph
+  var photo = document.querySelector('.tags-photo');
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!still) {
+    var tick = function () {
+      var r = photo.parentNode.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, 1 - (r.bottom / (innerHeight + r.height))));
+      photo.style.transform = 'scale(' + (1.02 + p * 0.12).toFixed(4) + ')';
+    };
+    addEventListener('scroll', function () { requestAnimationFrame(tick); }, { passive: true });
+    tick();
+  }
+
+  // Bundle counter: 20 pcs of 4x4 14ga 24ft at $90, about 4.32 lb/ft
+  var n = 1, PCS = 20, FT = 24, LBFT = 4.32, USD = 90;
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (x) { return Math.round(x).toLocaleString('en-US'); };
+  function order() {
+    return 'Hi Chavez Steel, I would like ' + n + ' bundle' + (n > 1 ? 's' : '') + ' of 4x4 14ga 24ft red primer tube (' + n * PCS + ' pieces) at $90 each. Is it in stock for pickup?';
+  }
+  function render() {
+    $('count').textContent = n;
+    $('t-pcs').textContent = n * PCS;
+    $('t-ft').textContent = fmt(n * PCS * FT) + ' ft';
+    $('t-lb').textContent = '≈ ' + fmt(Math.round(n * PCS * FT * LBFT / 10) * 10) + ' lb';
+    $('t-usd').textContent = '$' + fmt(n * PCS * USD);
+    $('less').disabled = n <= 1;
+  }
+  $('less').addEventListener('click', function () { if (n > 1) { n--; render(); } });
+  $('more').addEventListener('click', function () { if (n < 20) { n++; render(); } });
+  $('copy').addEventListener('click', function () {
+    var t = order();
+    var done = function () { $('copy-note').textContent = 'Copied. Paste it into Messenger when you message us.'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { $('copy-note').textContent = t; });
+    else $('copy-note').textContent = t;
+  });
+  render();
+})();
+</script>
+</body>
+</html>
