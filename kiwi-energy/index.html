@@ -10,11 +10,12 @@
 @font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: italic; font-display: swap; src: url(assets/fonts/source-serif-4-latin-600-italic.woff2) format("woff2"); }
 @font-face { font-family: "Source Serif 4"; font-weight: 700; font-display: swap; src: url(assets/fonts/source-serif-4-latin-700-normal.woff2) format("woff2"); }
 @font-face { font-family: "Public Sans"; font-weight: 400; font-display: swap; src: url(assets/fonts/public-sans-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 700; font-display: swap; src: url(assets/fonts/public-sans-latin-700-normal.woff2) format("woff2"); }
 @font-face { font-family: "Public Sans"; font-weight: 600; font-display: swap; src: url(assets/fonts/public-sans-latin-600-normal.woff2) format("woff2"); }
 
 :root {
   /* KiwiEnergy greens from their logo and site, with the rock colours of a Gulf Coast section */
-  --kiwi: #2b9a3c;
+  --kiwi: #2ca840;
   --green: #138a24;
   --green-deep: #0c5c18;
   --forest: #0a3d12;
@@ -118,7 +119,7 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 /* ---------- About ---------- */
 .about { padding-top: 160px; padding-bottom: 160px; row-gap: 48px; align-items: start; }
 .about h2 { grid-column: 1 / 13; }
-.about .seis { grid-column: 1 / 6; aspect-ratio: 541 / 584; }
+.about .seis { grid-column: 1 / 6; aspect-ratio: 370 / 400; }
 .about .copy { grid-column: 7 / 13; display: grid; gap: 40px; }
 .about h3 { font: 600 italic var(--step-lead)/1.15 var(--serif); color: var(--green-deep); margin-bottom: 12px; }
 .about .copy p + p { margin-top: 12px; }
@@ -163,7 +164,7 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 .partners { background: #fff; padding-top: 160px; padding-bottom: 160px; row-gap: 48px; }
 .partners h2 { grid-column: 1 / 13; }
 .sme { grid-column: 1 / 8; background: var(--char); color: #fff; border-radius: var(--r); padding: 40px; display: grid; grid-template-columns: auto 1fr; gap: 20px 28px; align-items: start; }
-.sme .mark { background: #fff; border-radius: 10px; padding: 12px; width: 112px; }
+.sme .mark { background: #fff; border-radius: 10px; padding: 10px 12px; width: 150px; }
 .sme h3 { font: 700 var(--step-head)/1 var(--serif); letter-spacing: -0.015em; align-self: center; }
 .sme p { grid-column: 1 / 3; color: #e6e7e3; }
 .sme .stat { margin-top: 8px; padding-top: 22px; border-top: 3px solid var(--lime); font: 600 italic var(--step-lead)/1.3 var(--serif); color: #fff; }
@@ -171,13 +172,15 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 .log img { object-fit: contain; background: #fff; padding: 16px; }
 .wall-intro { grid-column: 9 / 13; align-self: end; font-size: var(--step-lead); line-height: 1.35; }
 .wall { grid-column: 1 / 13; display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-.wall li { background: var(--paper); border-radius: 12px; aspect-ratio: 3 / 2; display: grid; place-items: center; padding: 14px; transition: background-color .2s, transform .25s var(--ease); }
+.wall li { background: var(--paper); border-radius: 12px; aspect-ratio: 3 / 2; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; min-width: 0; padding: 14px; transition: background-color .2s, transform .25s var(--ease); }
 .wall li:hover { background: var(--mist); transform: translateY(-3px); }
-.wall img { width: 78%; height: auto; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.wall img { width: auto; height: auto; max-width: 92%; max-height: 92%; mix-blend-mode: multiply; }
+.wall .yuma { grid-template-columns: auto minmax(0, 1fr); gap: 12px; text-align: left; font-size: var(--step-small); line-height: 1.3; font-weight: 600; }
+.wall .yuma img { max-width: 64px; }
 .finance { grid-column: 1 / 13; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .finance div { background: var(--mist); border-radius: var(--r); padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .finance p { font-weight: 600; }
-.finance img { height: 56px; width: auto; mix-blend-mode: multiply; }
+.finance img { height: 64px; width: auto; mix-blend-mode: multiply; }
 
 /* ---------- Contact ---------- */
 .contact { padding-top: 160px; padding-bottom: 160px; row-gap: 40px; }
@@ -275,7 +278,7 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="KiwiEnergy, home"><svg viewBox="0 0 206 52" role="img" aria-label="KiwiEnergy"><text x="2" y="33" font-family="Public Sans, sans-serif" font-weight="600" font-size="34" letter-spacing="-0.5"><tspan fill="#2b9a3c">Kiwi</tspan><tspan fill="#2b2b2a">Energy</tspan></text><path d="M3 47 C 62 40, 142 37, 203 40 L 203 42.5 C 142 40.5, 64 43.5, 5 50 Z" fill="#2b9a3c"/></svg></a>
+    <a class="logo" href="#top" aria-label="KiwiEnergy, home"><svg viewBox="0 0 206 52" role="img" aria-label="KiwiEnergy"><text x="2" y="33" font-family="Public Sans, sans-serif" font-weight="700" font-size="34" letter-spacing="-0.8"><tspan fill="#2ca840">Kiwi</tspan><tspan fill="#1f201e">Energy</tspan></text><path d="M2 48.5 C 50 41, 130 37.5, 204 39.5 L 204 41.5 C 132 40.5, 56 44, 4 51.5 Z" fill="#2a9b3a"/></svg></a>
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#how">How we explore</a>
@@ -325,7 +328,7 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 <section class="about wrap grid" id="about" aria-labelledby="about-h">
   <h2 id="about-h" class="h2" data-r>Your Gulf Coast exploration partner</h2>
   <figure class="seis" data-r style="--i:1">
-    <div class="pic" style="height:100%"><img src="assets/seismic.jpg" alt="An interpreted seismic section with mapped faults and bright amplitude horizons" width="541" height="584" loading="lazy"></div>
+    <div class="pic" style="height:100%"><img src="assets/seismic.jpg" alt="An interpreted seismic section with mapped faults and bright amplitude horizons" width="370" height="400" loading="lazy"></div>
   </figure>
   <div class="copy">
     <div data-r style="--i:2">
@@ -349,17 +352,17 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
   </div>
   <div class="steps">
     <figure class="step" data-r>
-      <div class="pic"><img src="assets/amplitude-map.jpg" alt="A colour amplitude map of a prospect, with contours and faults" width="366" height="494" loading="lazy"></div>
+      <div class="pic"><img src="assets/amplitude-map.jpg" alt="A colour amplitude map of a prospect, with contours and faults" width="370" height="500" loading="lazy"></div>
       <h3>We generate prospects in-house</h3>
       <p>Our own geoscience and engineering team works up exploration prospects along the Gulf Coast.</p>
     </figure>
     <figure class="step" data-r style="--i:1">
-      <div class="pic"><img src="assets/well-log.png" alt="A well log with the pay zone shaded" width="244" height="228" loading="lazy"></div>
+      <div class="pic"><img src="assets/well-log.jpg" alt="A well log with the pay zone shaded" width="370" height="345" loading="lazy"></div>
       <h3>We screen prospects from other independents</h3>
       <p>We review prospects generated by other successful independents.</p>
     </figure>
     <figure class="step" data-r style="--i:2">
-      <div class="pic"><img src="assets/tanks.jpg" alt="Red production tanks and a catwalk at a Gulf Coast well site" width="706" height="465" loading="lazy"></div>
+      <div class="pic"><img src="assets/tanks.jpg" alt="Red production tanks and a catwalk at a Gulf Coast well site" width="370" height="245" loading="lazy"></div>
       <h3>We drill with real working interest</h3>
       <p>We participate in wildcat drilling at a significant level of working interest.</p>
     </figure>
@@ -418,34 +421,34 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 <section class="partners wrap grid" id="partners" aria-labelledby="partners-h">
   <h2 id="partners-h" class="h2" data-r>Partners</h2>
   <article class="sme" data-r style="--i:1">
-    <div class="mark"><img src="assets/partners/square-mile.png" alt="Square Mile Energy, LLC logo" width="90" height="71" loading="lazy"></div>
+    <div class="mark"><img src="assets/partners/square-mile.png" alt="Square Mile Energy, LLC logo" width="130" height="98" loading="lazy"></div>
     <h3>Square Mile Energy</h3>
     <p>KiwiEnergy shares offices and resources with Square Mile Energy LLC, a successful E&amp;P independent that operates many of our wells, founded in 1998 by Gary W. Loveless, Kerry Bonner and Mark Bloom. The two companies teamed up in 2003 to generate and drill exploration prospects onshore Gulf Coast, leading to numerous significant discoveries.</p>
     <p class="stat">Square Mile Energy became the highest oil producer and second-highest gas producer in Jefferson County, Texas.</p>
   </article>
   <p class="wall-intro" data-r style="--i:2">KiwiEnergy has partnered with many successful independents, including:</p>
   <ul class="wall" data-r style="--i:1">
-    <li><img src="assets/partners/alta.png" alt="Alta Resources, LLC" width="109" height="58" loading="lazy"></li>
-    <li><img src="assets/partners/brigham.png" alt="Brigham Exploration Company" width="111" height="63" loading="lazy"></li>
-    <li><img src="assets/partners/carrizo.png" alt="Carrizo" width="113" height="36" loading="lazy"></li>
-    <li><img src="assets/partners/bta.png" alt="BTA" width="92" height="49" loading="lazy"></li>
-    <li><img src="assets/partners/castleline.png" alt="Partner energy corporation" width="110" height="35" loading="lazy"></li>
-    <li><img src="assets/partners/cox-perkins.png" alt="Cox &amp; Perkins Exploration, Inc." width="112" height="31" loading="lazy"></li>
-    <li><img src="assets/partners/esenjay.png" alt="Esenjay Petroleum Corporation" width="112" height="47" loading="lazy"></li>
-    <li><img src="assets/partners/magnum.png" alt="Magnum" width="111" height="30" loading="lazy"></li>
-    <li><img src="assets/partners/new-century.png" alt="New Century Exploration, Inc." width="113" height="63" loading="lazy"></li>
-    <li><img src="assets/partners/samson.png" alt="Samson" width="112" height="33" loading="lazy"></li>
-    <li><img src="assets/partners/sandalwood.png" alt="Sandalwood Oil &amp; Gas Exploration &amp; Production" width="113" height="37" loading="lazy"></li>
-    <li><img src="assets/partners/wilcox.png" alt="Wilcox Oil &amp; Gas, Inc." width="92" height="63" loading="lazy"></li>
-    <li><img src="assets/partners/tri-c.png" alt="Tri-C Resources, Inc." width="113" height="46" loading="lazy"></li>
-    <li><img src="assets/partners/winn.png" alt="Winn Exploration Co., Inc." width="112" height="34" loading="lazy"></li>
-    <li><img src="assets/partners/yuma.png" alt="Yuma Exploration &amp; Production Company, Inc." width="110" height="43" loading="lazy"></li>
-    <li><img src="assets/partners/zachry.png" alt="Zachry" width="112" height="28" loading="lazy"></li>
-    <li><img src="assets/partners/chesapeake.png" alt="Chesapeake Energy" width="110" height="66" loading="lazy"></li>
+    <li><img src="assets/partners/alta.png" alt="Alta Resources, LLC" width="160" height="67" loading="lazy"></li>
+    <li><img src="assets/partners/brigham.png" alt="Brigham Exploration Company" width="160" height="86" loading="lazy"></li>
+    <li><img src="assets/partners/carrizo.png" alt="Carrizo" width="160" height="46" loading="lazy"></li>
+    <li><img src="assets/partners/bta.png" alt="BTA" width="128" height="59" loading="lazy"></li>
+    <li><img src="assets/partners/coastline.png" alt="Coastline Energy Corporation" width="155" height="48" loading="lazy"></li>
+    <li><img src="assets/partners/cox-perkins.png" alt="Cox &amp; Perkins Exploration, Inc." width="160" height="30" loading="lazy"></li>
+    <li><img src="assets/partners/esenjay.png" alt="Esenjay Petroleum Corporation" width="160" height="57" loading="lazy"></li>
+    <li><img src="assets/partners/magnum.png" alt="Magnum" width="160" height="35" loading="lazy"></li>
+    <li><img src="assets/partners/new-century.png" alt="New Century Exploration, Inc." width="160" height="84" loading="lazy"></li>
+    <li><img src="assets/partners/samson.png" alt="Samson" width="160" height="33" loading="lazy"></li>
+    <li><img src="assets/partners/sandalwood.png" alt="Sandalwood Oil &amp; Gas Exploration &amp; Production" width="160" height="49" loading="lazy"></li>
+    <li><img src="assets/partners/wilcox.png" alt="Wilcox Oil &amp; Gas, Inc." width="130" height="85" loading="lazy"></li>
+    <li><img src="assets/partners/tri-c.png" alt="Tri-C Resources, Inc." width="160" height="60" loading="lazy"></li>
+    <li><img src="assets/partners/winn.png" alt="Winn Exploration Co., Inc." width="160" height="35" loading="lazy"></li>
+    <li class="yuma"><img src="assets/partners/yuma.png" alt="" width="73" height="52" loading="lazy"><span>Yuma Exploration &amp; Production Company, Inc.</span></li>
+    <li><img src="assets/partners/zachry.png" alt="Zachry" width="160" height="49" loading="lazy"></li>
+    <li><img src="assets/partners/chesapeake.png" alt="Chesapeake Energy" width="160" height="89" loading="lazy"></li>
   </ul>
   <div class="finance" data-r style="--i:2">
-    <div><p>Reserve-based line of credit</p><img src="assets/partners/iberiabank.png" alt="IBERIABANK" width="112" height="29" loading="lazy"></div>
-    <div><p>Accounting firm</p><img src="assets/partners/bkd.png" alt="BKD, CPAs &amp; Advisors" width="94" height="59" loading="lazy"></div>
+    <div><p>Reserve-based line of credit</p><img src="assets/partners/iberiabank.png" alt="IBERIABANK" width="160" height="46" loading="lazy"></div>
+    <div><p>Accounting firm</p><img src="assets/partners/bkd.png" alt="BKD, CPAs &amp; Advisors" width="135" height="80" loading="lazy"></div>
   </div>
 </section>
 
@@ -469,7 +472,7 @@ figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft);
 <footer class="foot">
   <div class="wrap">
     <div class="row">
-      <a class="logo" href="#top" aria-label="KiwiEnergy, back to top"><svg viewBox="0 0 206 52" role="img" aria-label="KiwiEnergy"><text x="2" y="33" font-family="Public Sans, sans-serif" font-weight="600" font-size="34" letter-spacing="-0.5"><tspan fill="#2b9a3c">Kiwi</tspan><tspan fill="#2b2b2a">Energy</tspan></text><path d="M3 47 C 62 40, 142 37, 203 40 L 203 42.5 C 142 40.5, 64 43.5, 5 50 Z" fill="#2b9a3c"/></svg></a>
+      <a class="logo" href="#top" aria-label="KiwiEnergy, back to top"><svg viewBox="0 0 206 52" role="img" aria-label="KiwiEnergy"><text x="2" y="33" font-family="Public Sans, sans-serif" font-weight="700" font-size="34" letter-spacing="-0.8"><tspan fill="#2ca840">Kiwi</tspan><tspan fill="#1f201e">Energy</tspan></text><path d="M2 48.5 C 50 41, 130 37.5, 204 39.5 L 204 41.5 C 132 40.5, 56 44, 4 51.5 Z" fill="#2a9b3a"/></svg></a>
       <nav aria-label="Footer">
         <a href="#about">About</a><a href="#how">How we explore</a><a href="#team">Management</a><a href="#partners">Partners</a><a href="#contact">Contact</a>
       </nav>
