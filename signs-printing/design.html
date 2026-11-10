@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design your Metal Max sign | Signs &amp; Printing</title>
+<meta name="description" content="Build your Metal Max aluminum sign: size, colours, sides and quantity. Text the order to Signs &amp; Printing and pay by card, online or in the shop.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Design your Metal Max sign | Signs &amp; Printing">
+<meta property="og:description" content="Build your Metal Max aluminum sign: size, colours, sides and quantity. Text the order to Signs &amp; Printing and pay by card, online or in the shop.">
+<meta property="og:image" content="assets/logo-splash.webp">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="bar wrap">
+    <a class="brand" href="index.html" aria-label="Signs and Printing, home"><img src="assets/logo-mark.webp" alt="" width="52" height="52"><span>Signs &amp; Printing</span></a>
+    <nav aria-label="Main">
+      <a href="index.html" data-es="Inicio">Home</a>
+      <a href="design.html" aria-current="page" data-es="Diseño">Design</a>
+      <a href="about.html" data-es="Nosotros">About</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn" href="tel:+18329066869" data-es="Llámenos">Call us</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="page-head wrap" aria-labelledby="ph-h">
+  <div class="ph-grid in-max">
+    <div>
+      <p class="kicker" data-r data-es="Diseño">Design</p>
+      <h1 id="ph-h" data-r style="--i:1"><span data-es="Arme su">Build your</span> <span class="y" style="white-space:nowrap">Metal Max</span></h1>
+      <p class="lead mute" data-r style="--i:2" data-es="Escoja el tamaño, los colores y el texto. Mándenos el pedido por texto y le enviamos una prueba y el precio.">Pick the size, colours and words. Text us the order and we'll send you a proof and the price.</p>
+    </div>
+    <img class="ph-logo" src="assets/logo-splash.webp" alt="" width="240" height="240">
+  </div>
+</section>
+
+<section class="order on-page wrap" id="order" aria-label="Order builder">
+  <div class="in-max">
+    <div class="order-grid">
+      <form class="form" id="order-form" data-r style="--i:1" onsubmit="return false">
+        <div>
+          <label class="f" for="txt" data-es="¿Qué dice?">What should it say?</label>
+          <input id="txt" type="text" maxlength="40" value="YOUR BUSINESS" autocomplete="off">
+        </div>
+        <div>
+          <label class="f" for="sub" data-es="Línea pequeña (opcional)">Small line (optional)</label>
+          <input id="sub" type="text" maxlength="50" value="(832) 906-6869" autocomplete="off">
+        </div>
+        <fieldset>
+          <legend data-es="Tamaño (pulgadas)">Size (inches)</legend>
+          <div class="chips" id="sizes"></div>
+        </fieldset>
+        <fieldset>
+          <legend data-es="Color de fondo">Background colour</legend>
+          <div class="chips">
+            <input type="radio" name="col" id="c1" value="#ffffff|#0b0b0d" checked><label for="c1"><span class="swatch" style="background:#fff"></span><span data-es="Blanco">White</span></label>
+            <input type="radio" name="col" id="c2" value="#0b0b0d|#ffd400"><label for="c2"><span class="swatch" style="background:#0b0b0d"></span><span data-es="Negro">Black</span></label>
+            <input type="radio" name="col" id="c3" value="#ffd400|#14144a"><label for="c3"><span class="swatch" style="background:#ffd400"></span><span data-es="Amarillo">Yellow</span></label>
+            <input type="radio" name="col" id="c4" value="#ee1c25|#ffffff"><label for="c4"><span class="swatch" style="background:#ee1c25"></span><span data-es="Rojo">Red</span></label>
+            <input type="radio" name="col" id="c5" value="#1d4fd8|#ffffff"><label for="c5"><span class="swatch" style="background:#1d4fd8"></span><span data-es="Azul">Blue</span></label>
+            <input type="radio" name="col" id="c6" value="#3fc31c|#0b0b0d"><label for="c6"><span class="swatch" style="background:#3fc31c"></span><span data-es="Verde">Green</span></label>
+            <input type="radio" name="col" id="c7" value="#ff0a9c|#ffffff"><label for="c7"><span class="swatch" style="background:#ff0a9c"></span><span data-es="Rosa">Pink</span></label>
+          </div>
+        </fieldset>
+        <div class="row2">
+          <fieldset>
+            <legend data-es="Lados">Sides</legend>
+            <div class="chips">
+              <input type="radio" name="sides" id="sd1" value="1" checked><label for="sd1" data-es="Un lado">One side</label>
+              <input type="radio" name="sides" id="sd2" value="2"><label for="sd2" data-es="Dos lados">Two sides</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend data-es="Hoyos para colgar">Mounting holes</legend>
+            <div class="chips">
+              <input type="radio" name="holes" id="h1" value="1" checked><label for="h1" data-es="Sí">Yes</label>
+              <input type="radio" name="holes" id="h0" value="0"><label for="h0" data-es="No">No</label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <label class="f" for="qty" data-es="Cantidad">Quantity</label>
+          <div class="qty">
+            <button type="button" id="minus" aria-label="Less">−</button>
+            <input id="qty" type="number" min="1" max="999" value="1" inputmode="numeric">
+            <button type="button" id="plus" aria-label="More">+</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="stage" data-r style="--i:2">
+        <div class="stage-view" aria-live="polite">
+          <span class="size-tag" id="size-tag">24 × 18 in</span>
+          <div class="preview" id="preview" style="background:#fff;color:#0b0b0d"><b></b><b></b><b></b><b></b><span id="p-txt">YOUR BUSINESS</span><span class="sub" id="p-sub">(832) 906-6869</span></div>
+        </div>
+        <div class="summary">
+          <dl id="sum"></dl>
+          <div class="price"><span data-es="Precio">Price</span><strong id="price"></strong></div>
+          <div class="actions">
+            <a class="btn" id="send" href="sms:+18329066869" data-es="Mandar pedido por texto">Text this order</a>
+            <a class="btn ghost" href="tel:+18329066869" data-es="Llamar">Call</a>
+          </div>
+          <p class="fine" data-es="Le mandamos una prueba del diseño antes de imprimir. Usted paga cuando la aprueba.">We send you a proof before anything is printed. You pay once you approve it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pay on-page wrap" id="pay" aria-labelledby="pay-h">
+  <div class="pay-box in-max" data-r>
+    <div class="pay-in">
+      <div>
+        <p class="kicker" data-es="Pagos">Payment</p>
+        <h2 id="pay-h" class="h2"><span data-es="Pague como">Pay the way</span> <span class="y" data-es="usted quiera.">you want.</span></h2>
+        <p class="lead mute" data-es="Pague cuando apruebe su prueba. Aceptamos todas las tarjetas principales.">Pay when you approve your proof. We take all major cards.</p>
+        <div class="cards-row" aria-label="Cards accepted">
+          <span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span>
+        </div>
+      </div>
+      <div class="methods">
+        <div class="method" id="m-card">
+          <span class="ico" style="--c:var(--yellow); --ink:var(--black)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 9.5h19" stroke="currentColor" stroke-width="2.4"/><path d="M6 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h3 data-es="Tarjeta en línea">Card online</h3><p id="card-note" data-es="Le mandamos un enlace de pago seguro por texto.">We text you a secure payment link.</p></div>
+          <a class="btn" id="card-btn" href="sms:+18329066869" data-es="Pagar">Pay now</a>
+        </div>
+        <div class="method" id="m-zelle" hidden>
+          <span class="ico" style="--c:var(--purple)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h10L7 18h10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/></svg></span>
+          <div><h3>Zelle</h3><p id="zelle-to"></p></div>
+          <button class="btn ghost" type="button" data-copy="zelle" data-es="Copiar">Copy</button>
+        </div>
+        <div class="method" id="m-cashapp" hidden>
+          <span class="ico" style="--c:var(--green); --ink:var(--black)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 8.5c-.8-1-2-1.5-3.5-1.5-2 0-3.5 1-3.5 2.5 0 3.5 7 2 7 5.5 0 1.5-1.5 2.5-3.5 2.5-1.6 0-3-.6-3.8-1.7M12 4.5v15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <div><h3>Cash App</h3><p id="cashapp-to"></p></div>
+          <a class="btn ghost" id="cashapp-btn" href="#" rel="noopener" data-es="Abrir">Open</a>
+        </div>
+        <div class="method">
+          <span class="ico" style="--c:var(--red)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20H4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></span>
+          <div><h3 data-es="En la tienda">In the shop</h3><p data-es="Efectivo o tarjeta al recoger en 4528 Hwy 6 N.">Cash or card when you pick up at 4528 Hwy 6 N.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid in-max">
+    <img src="assets/logo-splash.webp" alt="Signs &amp; Printing" width="150" height="150" loading="lazy">
+    <p class="big"><span data-es="Metal Max.">Metal Max.</span><br><span class="y" data-es="Hecho en Houston.">Made in Houston.</span></p>
+    <div class="links">
+      <a href="tel:+18329066869">(832) 906-6869</a>
+      <a href="sms:+18329066869" data-es="Mándenos un texto">Text us</a>
+      <a href="design.html" data-es="Diseñe su letrero">Design your sign</a>
+      <a href="about.html#visit">4528 Hwy 6 N, Houston, TX 77084</a>
+    </div>
+  </div>
+  <div class="legal in-max">
+    <p>© 2026 Signs &amp; Printing · Houston, Texas</p>
+    <p data-es="Letreros de aluminio Metal Max">Metal Max aluminum signs</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+18329066869" data-es="Llamar">Call</a>
+  <a class="btn ghost" href="sms:+18329066869" data-es="Texto">Text us</a>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="assets/design.js"></script>
+</body>
+</html>
