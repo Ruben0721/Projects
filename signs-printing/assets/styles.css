@@ -323,3 +323,11 @@ ul, ol { padding: 0; list-style: none; }
   .top nav a[aria-current="page"]::after { margin-top: 1px; }
   .cta-box .btn { flex: 1 1 100%; }
 }
+
+/* ---------- Photos (sample images live in assets/photos — swap for real ones, same file names) ---------- */
+.use { padding: 12px 12px 24px; gap: 18px; justify-content: flex-start; }
+.use > div { padding: 0 12px; }
+.use-img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; background: rgba(0,0,0,.2); transition: transform .5s var(--ease); }
+.use:hover .use-img { transform: scale(1.02); }
+.about-photo { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
+.about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
