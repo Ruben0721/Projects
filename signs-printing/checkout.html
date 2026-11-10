@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Signs &amp; Printing</title>
+<meta name="description" content="Review your Metal Max signs and place your order with Signs &amp; Printing, 4528 Hwy 6 N, Houston.">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Checkout | Signs &amp; Printing">
+<meta property="og:description" content="Design your own Metal Max aluminum sign: templates, your photos and logo, a live 3D preview and instant prices.">
+<meta property="og:image" content="assets/logo.webp">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/designer.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="bar wrap">
+    <a class="brand" href="index.html" aria-label="Signs and Printing, home"><img src="assets/logo-mark.webp" alt="" width="52" height="52"><span>Signs &amp; Printing</span></a>
+    <nav aria-label="Main">
+      <a href="index.html" data-es="Inicio">Home</a>
+      <a href="design.html" data-es="Diseño">Design</a>
+      <a href="about.html" data-es="Nosotros">About</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="cart-link" href="checkout.html" aria-current="page" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5.2 4H2V2h4.8l.9 2H21l-3.6 8H8.4l-.9 2H19v2H4.3l2.4-4.6z" fill="currentColor"/></svg><span class="cart-count" data-cart-count hidden>0</span></a>
+    <a class="btn" href="tel:+18329066869" data-es="Llámenos">Call us</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="d-head wrap" aria-labelledby="ph-h">
+  <div class="in-max d-head-in">
+    <div>
+      <p class="kicker" data-es="Pagar">Checkout</p>
+      <h1 id="ph-h"><span data-es="Su pedido.">Your order.</span> <span class="y" data-es="Casi listo.">Almost there.</span></h1>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><p class="demo-banner in-max"><b data-es="Vista previa">Preview</b> <span data-es="El pago en línea todavía no está conectado. Los pedidos no se envían ni se cobran todavía, y los precios son temporales.">Online payment isn't connected yet. Orders aren't sent or charged yet, and prices are temporary.</span></p></div>
+
+<section class="co wrap" id="co" aria-label="Checkout">
+  <div class="co-grid in-max">
+    <div class="co-main">
+      <div class="co-card">
+        <div class="co-h"><h2 data-es="Carrito">Cart</h2><a class="mini-link" href="design.html" data-es="+ Diseñar otro letrero">+ Design another sign</a></div>
+        <ul class="cart-list" id="cart-list"></ul>
+        <div class="cart-empty" id="cart-empty" hidden>
+          <p data-es="Su carrito está vacío.">Your cart is empty.</p>
+          <a class="btn" href="design.html" data-es="Diseñe su letrero">Design your sign</a>
+        </div>
+      </div>
+
+      <form class="co-form" id="co-form" novalidate>
+        <div class="co-card">
+          <h2 data-es="Sus datos">Your details</h2>
+          <div class="f-grid">
+            <label class="fld"><span data-es="Nombre *">Name *</span><input id="f-name" name="name" autocomplete="name" required></label>
+            <label class="fld"><span data-es="Teléfono *">Phone *</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+            <label class="fld"><span data-es="Correo">Email</span><input id="f-email" name="email" type="email" autocomplete="email"></label>
+            <label class="fld"><span data-es="Negocio (opcional)">Business (optional)</span><input id="f-biz" name="business" autocomplete="organization"></label>
+          </div>
+        </div>
+
+        <div class="co-card">
+          <h2 data-es="¿Cómo lo recibe?">How you'll get it</h2>
+          <div class="opts co-opts">
+            <div class="opt-row">
+              <input type="radio" name="get" id="g-pick" value="pickup" checked><label for="g-pick"><span data-es="Recoger en la tienda">Pick up at the shop</span><small data-es="Gratis · 4528 Hwy 6 N">Free · 4528 Hwy 6 N</small></label>
+              <input type="radio" name="get" id="g-del" value="delivery"><label for="g-del"><span data-es="Entrega local">Local delivery</span><small id="del-price"></small></label>
+            </div>
+          </div>
+          <div class="f-grid" id="addr" hidden>
+            <label class="fld wide"><span data-es="Dirección *">Street address *</span><input id="f-street" autocomplete="street-address"></label>
+            <label class="fld"><span data-es="Ciudad *">City *</span><input id="f-city" autocomplete="address-level2" value="Houston"></label>
+            <label class="fld"><span data-es="Código postal *">ZIP *</span><input id="f-zip" autocomplete="postal-code" inputmode="numeric"></label>
+          </div>
+        </div>
+
+        <div class="co-card">
+          <h2 data-es="Pago">Payment</h2>
+          <div class="pay-opts">
+            <label class="pay-opt"><input type="radio" name="pay" value="card" checked>
+              <span class="po-in"><span class="po-h"><b data-es="Tarjeta en línea">Card online</b><em class="soon" data-es="Próximamente">Coming soon</em></span><span class="po-cards"><i>VISA</i><i>MC</i><i>AMEX</i><i>DISC</i><i>Apple Pay</i><i>Google Pay</i></span></span></label>
+            <div class="card-fields" id="card-fields">
+              <label class="fld wide"><span data-es="Número de tarjeta">Card number</span><input placeholder="1234 1234 1234 1234" disabled></label>
+              <label class="fld"><span data-es="Vence">Expires</span><input placeholder="MM / YY" disabled></label>
+              <label class="fld"><span>CVC</span><input placeholder="123" disabled></label>
+              <p class="card-note wide" data-es="El pago con tarjeta se está configurando. Por ahora, haga su pedido y le mandamos un enlace de pago seguro por texto cuando apruebe su prueba.">Card payments are being set up. For now, place your order and we'll text you a secure payment link once you approve your proof.</p>
+            </div>
+            <label class="pay-opt"><input type="radio" name="pay" value="shop">
+              <span class="po-in"><span class="po-h"><b data-es="Pagar en la tienda">Pay in the shop</b></span><span class="mute" data-es="Efectivo o tarjeta al recoger.">Cash or card when you pick up.</span></span></label>
+            <label class="pay-opt" id="po-zelle" hidden><input type="radio" name="pay" value="zelle">
+              <span class="po-in"><span class="po-h"><b>Zelle</b></span><span class="mute" id="zelle-to"></span></span></label>
+            <label class="pay-opt" id="po-cashapp" hidden><input type="radio" name="pay" value="cashapp">
+              <span class="po-in"><span class="po-h"><b>Cash App</b></span><span class="mute" id="cashapp-to"></span></span></label>
+          </div>
+        </div>
+
+        <div class="co-card">
+          <h2 data-es="Notas">Notes</h2>
+          <label class="fld wide"><span data-es="¿Algo que debamos saber? (fecha, colores exactos, etc.)">Anything we should know? (deadline, exact colours, etc.)</span><textarea id="f-notes" rows="3"></textarea></label>
+          <label class="check co-check"><input type="checkbox" id="f-proof" checked><span><b data-es="Mándenme una prueba para aprobar antes de imprimir">Send me a proof to approve before printing</b></span></label>
+        </div>
+      </form>
+    </div>
+
+    <aside class="co-side">
+      <div class="co-card sum-card">
+        <h2 data-es="Resumen">Summary</h2>
+        <dl class="price-rows" id="sum-rows"></dl>
+        <div class="price-total"><span data-es="Total">Total</span><strong id="sum-total">$0.00</strong></div>
+        <p class="tmp-tag" data-es="Precios temporales · se confirman con su prueba">Temporary prices · confirmed with your proof</p>
+        <p class="co-err" id="co-err" role="alert" hidden></p>
+        <button type="submit" form="co-form" class="btn place" id="place" data-es="Hacer pedido">Place order</button>
+        <p class="fine" data-es="No se le cobra nada ahora. Pagará cuando apruebe su prueba.">You won't be charged now. You pay once you approve your proof.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="done wrap" id="done" hidden aria-labelledby="done-h">
+  <div class="done-box in-max">
+    <span class="done-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg></span>
+    <p class="kicker" id="done-num"></p>
+    <h2 id="done-h" class="h2"><span data-es="¡Gracias!">Thank you!</span> <span class="y" data-es="Pedido listo.">Order ready.</span></h2>
+    <p class="lead mute" data-es="Esta es una vista previa, así que el pedido todavía no se envió a la tienda. Mándelo por texto con un toque y le respondemos con su prueba.">This is a preview, so your order hasn't been sent to the shop yet. Text it to us with one tap and we'll reply with your proof.</p>
+    <ul class="done-list" id="done-list"></ul>
+    <div class="actions">
+      <a class="btn" id="done-sms" href="#" data-es="Mandar pedido por texto">Text this order to the shop</a>
+      <button type="button" class="btn ghost" id="done-print" data-es="Imprimir resumen">Print summary</button>
+      <a class="btn ghost" href="design.html" data-es="Diseñar otro">Design another</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid in-max">
+    <img class="logo-card" src="assets/logo.webp" alt="Signs &amp; Printing" width="150" height="150" loading="lazy">
+    <p class="big"><span data-es="Metal Max.">Metal Max.</span><br><span class="y" data-es="Hecho en Houston.">Made in Houston.</span></p>
+    <div class="links">
+      <a href="tel:+18329066869">(832) 906-6869</a>
+      <a href="sms:+18329066869" data-es="Mándenos un texto">Text us</a>
+      <a href="design.html" data-es="Diseñe su letrero">Design your sign</a>
+      <a href="about.html#visit">4528 Hwy 6 N, Houston, TX 77084</a>
+    </div>
+  </div>
+  <div class="legal in-max">
+    <p>© 2026 Signs &amp; Printing · Houston, Texas</p>
+    <p data-es="Letreros de aluminio Metal Max">Metal Max aluminum signs</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+18329066869" data-es="Llamar">Call</a>
+  <a class="btn ghost" href="sms:+18329066869" data-es="Texto">Text us</a>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="assets/pricing.js"></script>
+<script src="assets/checkout.js"></script>
+</body>
+</html>

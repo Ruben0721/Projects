@@ -337,3 +337,11 @@ ul, ol { padding: 0; list-style: none; }
 .use:hover .use-img { transform: scale(1.02); }
 .about-photo { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
 .about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* ---------- Cart link in the header ---------- */
+.cart-link { position: relative; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--black-3); color: #fff; text-decoration: none; transition: background-color .2s, color .2s; }
+.cart-link:hover, .cart-link[aria-current="page"] { background: #fff; color: var(--black); }
+.cart-link svg { width: 22px; height: 22px; }
+.cart-count { position: absolute; top: -4px; right: -4px; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--magenta); color: #fff; font: 900 .75rem/22px var(--font); text-align: center; box-shadow: 0 0 0 3px var(--black); }
+.cart-count[hidden] { display: none; }
+@media (max-width: 640px) { .cart-link { width: 42px; height: 42px; } }
