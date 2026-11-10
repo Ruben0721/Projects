@@ -229,11 +229,11 @@ ul, ol { padding: 0; list-style: none; }
 /* ---------- Motion ---------- */
 .js [data-r] { opacity: 0; translate: 0 26px; }
 .js .in [data-r] { opacity: 1; translate: 0 0; transition: opacity .7s var(--ease), translate .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
-.js .hero .splash img { opacity: 0; transform: scale(.85) rotate(-12deg); }
+.js .hero .splash img { opacity: 0; transform: scale(.85); }
 .js .hero.ready .splash img { opacity: 1; transform: none; transition: opacity .6s, transform 1.2s var(--ease); }
-.splash img { animation: spin 90s linear infinite; animation-play-state: paused; }
+.splash img { animation: float 6s ease-in-out infinite; animation-play-state: paused; }
 .hero.ready .splash img { animation-play-state: running; animation-delay: 1.2s; }
-@keyframes spin { to { rotate: 360deg; } }
+@keyframes float { 50% { translate: 0 -14px; } }  /* gentle bob only: the logo always stays upright */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -287,7 +287,7 @@ ul, ol { padding: 0; list-style: none; }
 .page-head h1 { font-weight: 900; font-style: italic; font-size: var(--step-display); line-height: .9; letter-spacing: -0.03em; }
 .page-head .lead { margin-top: 22px; max-width: 36ch; }
 .page-head .ph-logo { width: clamp(140px, 18vw, 240px); }
-.js .page-head .ph-logo { opacity: 0; transform: scale(.8) rotate(-14deg); }
+.js .page-head .ph-logo { opacity: 0; transform: scale(.8); }
 .js .page-head.ready .ph-logo { opacity: 1; transform: none; transition: opacity .6s, transform 1.1s var(--ease); }
 .order.on-page { padding-top: clamp(56px, 6vw, 88px); }
 .order.on-page .order-grid { margin-top: 0; }
